@@ -6,3 +6,7 @@ spring:
       path: /accounts-service
   application:
     name: accounts-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
