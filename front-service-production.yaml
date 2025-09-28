@@ -1,11 +1,11 @@
 server:
-  port: 8082
+  port: 8088
 spring:
   mvc:
     servlet:
-      path: /gateway-service
+      path: /front-service
   application:
-    name: gateway-service
+    name: front-service
 eureka:
   client:
     serviceUrl:

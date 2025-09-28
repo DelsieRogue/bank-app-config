@@ -1,5 +1,11 @@
 server:
   port: 8761
+spring:
+  mvc:
+    servlet:
+      path: /eureka-service
+  application:
+    name: eureka-service
 eureka:
   client:
     registerWithEureka: false

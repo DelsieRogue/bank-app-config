@@ -10,3 +10,17 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bank
+    username: user
+    password: pass
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      schema: accounts
+  spring:
+    jpa:
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          default_schema: accounts
