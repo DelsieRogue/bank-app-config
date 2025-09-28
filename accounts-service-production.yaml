@@ -14,8 +14,8 @@ spring:
         default_schema: accounts
   datasource:
     url: jdbc:postgresql://db:5432/bank
-    username: user
-    password: pass
+    username: postgres
+    password: postgres
     driver-class-name: org.postgresql.Driver
     hikari:
       schema: accounts
