@@ -3,10 +3,15 @@ server:
 spring:
   mvc:
     servlet:
-      path: /eureka-service
+      path: /eureka-server
   application:
-    name: eureka-service
+    name: eureka-server
 eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
