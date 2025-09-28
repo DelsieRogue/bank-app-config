@@ -9,16 +9,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    properties:
-      hibernate:
-        default_schema: accounts
   datasource:
     url: jdbc:postgresql://db:5432/bank
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
-    hikari:
-      schema: accounts
 eureka:
   client:
     serviceUrl:
