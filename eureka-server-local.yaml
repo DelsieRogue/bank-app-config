@@ -1,9 +1,6 @@
 server:
   port: 8761
 spring:
-  mvc:
-    servlet:
-      path: /eureka-server
   application:
     name: eureka-server
 eureka:
