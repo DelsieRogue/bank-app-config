@@ -6,7 +6,43 @@ spring:
       path: /gateway-service
   application:
     name: gateway-service
+
+  cloud:
+    gateway:
+      routes:
+        - id: accounts-service
+          uri: lb://accounts-service
+          predicates:
+            - Path=/accounts-service/**
+        - id: blocker-service
+          uri: lb://blocker-service
+          predicates:
+            - Path=/blocker-service/**
+        - id: cash-service
+          uri: lb://cash-service
+          predicates:
+            - Path=/cash-service/**
+        - id: exchange-generator-service
+          uri: lb://exchange-generator-service
+          predicates:
+            - Path=/exchange-generator-service/**
+        - id: exchange-service
+          uri: lb://exchange-service
+          predicates:
+            - Path=/exchange-service/**
+        - id: front-service
+          uri: lb://front-service
+          predicates:
+            - Path=/front-service/**
+        - id: notifications-service
+          uri: lb://notifications-service
+          predicates:
+            - Path=/notifications-service/**
+        - id: transfer-service
+          uri: lb://transfer-service
+          predicates:
+            - Path=/transfer-service/**
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-server:8761/eureka/ 
+      defaultZone: http://eureka-server:8761/eureka/
